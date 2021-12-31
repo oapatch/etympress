@@ -1,0 +1,5 @@
+
+# TODO prolly git history needs some pruning 
+db.sqlite3
+*.pyc
+__pycache__/

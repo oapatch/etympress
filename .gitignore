@@ -1,0 +1,16 @@
+.DS_Store
+
+# Local Setup Docs
+*.idea/
+*.tfvars
+todo.md
+*.git_*
+*.pyc
+__pycache__/
+venv/
+elm-stuff/
+scratch.txt
+*scratch/
+*_bk/
+*_bk
+

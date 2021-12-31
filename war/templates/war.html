@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon"
+                     href="{% static 'twhi.ico' %}"/>
+    <title>The War's Head Inn</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+  <body>
+    <hr />
+    {% block container %}
+    {% block navbar %}
+    {% block title %}
+    <h1>The War's Head Inn</h1>
+    {% endblock %}
+
+    {% block calendar %}
+    <h2>{{ month }} of {{ repetition }} {{ weekday }}</h2>
+    {% endblock %}
+
+    {% endblock %}
+
+    <hr />
+
+    {% block content %}
+
+    <p>Here are some essays I'm working on!  Live, as we practice setting up this
+    web portal!  Database soon!</p>
+
+    <p>Also, Interactivity!</p>
+
+    <h2>The dangerous clause, explained</h2>
+    <hr />
+    <h2>The dangerous clause's danger, fully described</h2>
+    <hr />
+    <h2>The dangerous clause in practice</h2>
+    <hr />
+    <h2>The specificity of an Application of the Legislatures</h2>
+    <hr />
+    <h2>
+      The generative properties of a convention
+    </h2>
+    <hr />
+    <h2>
+      The Advantage of an Application of the State Legislatures
+    </h2>
+    <hr />
+    <h2>
+      The Disadvantage of the "Whenever" of the Federal Legislature
+    </h2>
+    <hr />
+    <h2>
+      Certain General and Miscellaneous Objects to the Constitution
+    </h2>
+    <hr />
+    <h2>
+      A Method Towards Implementation
+    </h2>
+    <hr />
+    <h2>
+      The Advantage of Implementation with an eye towards convention
+      ratification
+    </h2>
+    <hr />
+    <h2>
+      The Disadvantage of Implemention with an asusmption of legislatures
+      ratification
+    </h2>
+    <hr />
+    <h2>The Advantage of Organizing Conventions In Every State</h2>
+    <hr />
+    <h2>The Disadvantage of State, or Citizenship, Exclusion</h2>
+    <hr />
+    <h2>People Conventions</h2>
+    <hr />
+    <h2>Organizing For State Legislature Runs On Convention Organizing</h2>
+    <hr />
+    <h2>Peaceful Transitions of Power</h2>
+    <hr />
+    <h2>"We're All In This Together;" or, Asymptotic Complexity Analysis
+      Applied</h2>
+    <hr />
+    <h2>Where Do I Sign Up?</h2>
+    <p>Here is where the sign up and the entrance into the """Inn""" would be, a
+    hypertext visualization of a distributed organizational Multi User ...
+    War's Head Inn!  Okay!  Working on it!!! (Email ber@etympress.com to
+    contribute!  Or, visit the Source Code and submit Code!!! over at
+
+    <a href="https://github.com/oapatch/etympress">
+      github.com/oapatch/etympress
+    </a>
+    </p>
+
+    {% block form %}
+    <form method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Enter...The War's Head Inn..">
+    </form>
+    {% endblock %}
+    <hr />
+
+    {% endblock %}
+
+    {% block credits %}
+    {% endblock %}
+    <p>Copyright &copy; 2021 Orchid Ber. All Rights Reserved.</p>
+    <p>Support The Inn</p>
+    <p>Here is where donation buttons would be!  Working on it!!!</p>
+    <ul>
+      <li>
+        <a href="">PayPal</a>
+      </li>
+      <li>
+        <a href="">Stripe Credit Cards (U.S. Only)</a>
+      </li>
+      <li>
+        <a href="">CashApp</a>
+      </li>
+      <li>
+        <a href="">Kickstarter</a>
+      </li>
+      <li>
+        <a href="">GoFundMe</a>
+      </li>
+      <li>
+        <a href="">Venmo</a>
+      </li>
+    </ul>
+    {% endblock %}
+
+    <hr />
+  </body>
+</html>
+
