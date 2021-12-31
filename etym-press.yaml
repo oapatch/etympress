@@ -1,0 +1,30 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+databases:
+- cluster_name: ww3-sl-22-cord
+  db_name: defaultdb
+  db_user: doadmin
+  engine: PG
+  name: ww3-sl-22-cord
+  production: true
+  version: "13"
+name: etym-press
+region: nyc
+services:
+- environment_slug: python
+  envs:
+  - key: DATABASE_URL
+    scope: RUN_TIME
+    value: ${ww3-sl-22-cord.DATABASE_URL}
+  git:
+    branch: main
+    repo_clone_url: https://github.com/oapatch/etympress.git
+  http_port: 8080
+  instance_count: 3
+  instance_size_slug: professional-m
+  name: etym-press
+  routes:
+  - path: /
+  run_command: gunicorn --worker-tmp-dir /dev/shm django_app.wsgi
+  source_dir: /
