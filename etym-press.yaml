@@ -20,7 +20,7 @@ services:
     value: "True"
   - key: DATABASE_URL
     scope: RUN_AND_BUILD_TIME
-    value: ${<NAME_OF_YOUR_DATABASE>.DATABASE_URL}
+    value: ${db.DATABASE_URL}
   - key: DJANGO_SECRET_KEY
     scope: RUN_AND_BUILD_TIME
     type: SECRET
