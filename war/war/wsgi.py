@@ -1,7 +1,5 @@
-# Copyright 2021 Orchid Ber. All Rights Reserved.
-
 """
-WSGI config for war project.
+WSGI config for The War's Head Inn!!!
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
