@@ -1,5 +1,3 @@
-# Copyright 2021 Orchid Ber. All Rights Reserved.
-
 # TODO trans import as _
 # for localization!
 

@@ -1,4 +1,3 @@
-# Copyright 2021 Orchid Ber. All Rights Reserved.
 from django.apps import AppConfig
 
 

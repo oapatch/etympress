@@ -1,5 +1,3 @@
-# Copyright 2021 Orchid Ber. All Rights Reserved.
-
 from django.db import models
 from django.utils import timezone
 
