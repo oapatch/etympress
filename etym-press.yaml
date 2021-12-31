@@ -18,7 +18,7 @@ services:
     scope: RUN_TIME
     value: ${ww3-sl-22-cord.DATABASE_URL}
   git:
-    branch: main
+    branch: root
     repo_clone_url: https://github.com/oapatch/etympress.git
   http_port: 8080
   instance_count: 3
