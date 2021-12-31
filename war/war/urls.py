@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
-from war.views import Jade, WarInn, WarEntrance
+from war.war.views import Jade, WarInn, WarEntrance
 
 urlpatterns = [
     path('', Jade.as_view()),

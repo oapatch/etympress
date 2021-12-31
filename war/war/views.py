@@ -4,8 +4,8 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 
-from war.models import Weekday, Repetition, Month
-from post.models import Entry
+from war.war.models import Weekday, Repetition, Month
+from war.post.models import Entry
 
 
 class TodaysContextMixin(ContextMixin):
