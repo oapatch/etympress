@@ -2,28 +2,40 @@ alerts:
 - rule: DEPLOYMENT_FAILED
 - rule: DOMAIN_FAILED
 databases:
-- cluster_name: ww3-sl-22-cord
-  db_name: defaultdb
-  db_user: doadmin
-  engine: PG
-  name: ww3-sl-22-cord
-  production: true
-  version: "13"
-name: etym-press
+- engine: PG
+  name: db
+  num_nodes: 1
+  size: db-s-dev-database
+  version: "12"
+name: etympress
 region: nyc
 services:
 - environment_slug: python
   envs:
+  - key: DJANGO_ALLOWED_HOSTS
+    scope: RUN_AND_BUILD_TIME
+    value: ${APP_DOMAIN},etympress.com,www.etympress.com,warsheadinn.etympress.com
+  - key: DEBUG
+    scope: RUN_AND_BUILD_TIME
+    value: "True"
+  - key: DATABASE_URL
+    scope: RUN_AND_BUILD_TIME
+    value: ${<NAME_OF_YOUR_DATABASE>.DATABASE_URL}
+  - key: DJANGO_SECRET_KEY
+    scope: RUN_AND_BUILD_TIME
+    type: SECRET
+    value: EV[1:iYZy0UuVy2g8ZXXWMXKQdIv3TZrxmha5:AAg6sSPYM/6kSBIcvTZpKxq972JaPUIHSKStVX9RiZxjTPQuq6PFs7Yv4tMftQ==]
   - key: DATABASE_URL
     scope: RUN_TIME
-    value: ${ww3-sl-22-cord.DATABASE_URL}
-  git:
+    value: ${db.DATABASE_URL}
+  github:
     branch: root
-    repo_clone_url: https://github.com/oapatch/etympress.git
+    deploy_on_push: true
+    repo: oapatch/etympress
   http_port: 8080
-  instance_count: 3
-  instance_size_slug: professional-m
-  name: etym-press
+  instance_count: 2
+  instance_size_slug: professional-xs
+  name: etympress
   routes:
   - path: /
   run_command: gunicorn --worker-tmp-dir /dev/shm war.war.wsgi
