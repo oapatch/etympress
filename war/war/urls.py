@@ -22,10 +22,9 @@ from django.views.generic.base import RedirectView
 #from war.war.views import Jade, WarInn, WarEntrance
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='connect')),
+    path('', Jade.as_view()),
     path('connect', RedirectView.as_view(url='https://docs.google.com/forms/d/1cI0xz9zYplaaxosRclDTR4B8g0EwcLrJ_qDDOwPihe4/')),
     # path('xine', RedirectView.as_view(url=''),
-    #path('', Jade.as_view()),
     #path('admin/', admin.site.urls),
     #path('inn/', WarInn.as_view()),
 ]
