@@ -25,6 +25,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='https://thewarsheadinn.tumblr.com/')),
     path('connect', RedirectView.as_view(url='https://docs.google.com/forms/d/1cI0xz9zYplaaxosRclDTR4B8g0EwcLrJ_qDDOwPihe4/')),
     path('post', RedirectView.as_view(url='https://thewarsheadinn.tumblr.com/')),
+    path('code', RedirectView.as_view(url='https://github.com/oapatch/etympress')),
     #path('/stage', Jade.as_view(url='stage')),
     path('admin/', admin.site.urls),
     # path('xine', RedirectView.as_view(url=''),
